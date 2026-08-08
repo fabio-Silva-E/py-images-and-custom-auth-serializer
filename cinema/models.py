@@ -8,9 +8,9 @@ import uuid
 
 def movie_image_path(instance: "Movie", filename: str):
     extension = pathlib.Path(filename).suffix
-    filename = f"{slugify(instance.title)}-{uuid.uuid4()}{extension}"
+    filename = f"{slugify(instance.title)}-{uuid}{extension}"
 
-    return pathlib.Path("upload-image") / filename
+    return pathlib.Path("uploads/movies") / filename
 
 
 class CinemaHall(models.Model):
