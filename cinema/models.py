@@ -10,7 +10,7 @@ def movie_image_path(instance: "Movie", filename: str):
     extension = pathlib.Path(filename).suffix
     filename = f"{slugify(instance.title)}-{uuid.uuid4()}{extension}"
 
-    return pathlib.Path("uploads/movies") / filename
+    return f"uploads/movies/{filename}"
 
 
 class CinemaHall(models.Model):
