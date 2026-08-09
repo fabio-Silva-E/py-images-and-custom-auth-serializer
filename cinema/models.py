@@ -8,7 +8,7 @@ import uuid
 
 def movie_image_path(instance: "Movie", filename: str):
     extension = pathlib.Path(filename).suffix
-    filename = f"{slugify(instance.title)}-{uuid}{extension}"
+    filename = f"{slugify(instance.title)}-{uuid.uuid4()}{extension}"
 
     return pathlib.Path("uploads/movies") / filename
 
