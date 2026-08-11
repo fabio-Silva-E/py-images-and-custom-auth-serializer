@@ -9,3 +9,4 @@ venv/
 *.pyc
 **db.sqlite3
 MEDIA_ROOT/media/
+upload/movies
